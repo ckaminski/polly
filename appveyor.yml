@@ -7,37 +7,39 @@ environment:
       EXAMPLE: 01-executable
       CONFIG: Release
 
-    - TOOLCHAIN: "ninja-vs-12-2013-win64"
+    #- TOOLCHAIN: "ninja-vs-12-2013-win64"
+    #  EXAMPLE: 01-executable
+    #  CONFIG: Release
+
+    #- TOOLCHAIN: "nmake-vs-12-2013-win64"
+    #  EXAMPLE: 01-executable
+    #  CONFIG: Release
+
+    #- TOOLCHAIN: "vs-12-2013"
+    #  EXAMPLE: 01-executable
+    #  CONFIG: Release
+
+    #- TOOLCHAIN: "vs-14-2015"
+    #  EXAMPLE: 01-executable
+    #  CONFIG: Release
+
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+      TOOLCHAIN: "mingw-cxx14"
       EXAMPLE: 01-executable
       CONFIG: Release
 
-    - TOOLCHAIN: "nmake-vs-12-2013-win64"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+      TOOLCHAIN: "msys-cxx14"
       EXAMPLE: 01-executable
       CONFIG: Release
 
-    - TOOLCHAIN: "vs-12-2013"
-      EXAMPLE: 01-executable
-      CONFIG: Release
+    #- TOOLCHAIN: "vs-14-2015"
+    #  EXAMPLE: 02-library
+    #  CONFIG: Release
 
-    - TOOLCHAIN: "vs-14-2015"
-      EXAMPLE: 01-executable
-      CONFIG: Release
-
-    - TOOLCHAIN: "mingw"
-      EXAMPLE: 01-executable
-      CONFIG: Release
-
-    - TOOLCHAIN: "msys"
-      EXAMPLE: 01-executable
-      CONFIG: Release
-
-    - TOOLCHAIN: "vs-14-2015"
-      EXAMPLE: 02-library
-      CONFIG: Release
-
-    - TOOLCHAIN: "vs-14-2015"
-      EXAMPLE: 03-shared-link
-      CONFIG: Release
+    #- TOOLCHAIN: "vs-14-2015"
+    #  EXAMPLE: 03-shared-link
+    #  CONFIG: Release
 
 install:
   # Python 3
@@ -61,10 +63,12 @@ install:
 
   # Use MinGW from Qt tools because version is higher
   # * http://www.appveyor.com/docs/installed-software#qt
-  - cmd: set MINGW_PATH=C:\Qt\Tools\mingw492_32\bin
+  - cmd: set MINGW_PATH=C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin
 
   # MSYS2 location
-  - cmd: set MSYS_PATH=C:\msys64\usr\bin
+  - cmd: set MSYS_PATH=C:\msys64\mingw64\bin
+  - cmd: dir C:\ 
+  - cmd: dir C:\msys64\mingw64\bin 
 
 build_script:
   - cmd: python %POLLY_SOURCE_DIR%\bin\build.py --home examples/%EXAMPLE% --toolchain %TOOLCHAIN% --config %CONFIG% --verbose --clear --install --test
