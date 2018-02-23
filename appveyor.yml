@@ -27,21 +27,29 @@ environment:
       EXAMPLE: 01-executable
       CONFIG: Release
       CMAKE_MAKE_PROGRAM: C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin\mingw64-make.exe
+      MINGW_PATH: C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin
+      PATH:  %PATH%;%MINGW_PATH%
 
     - TOOLCHAIN: "mingw-cxx17"
       EXAMPLE: 01-executable
       CONFIG: Release
       CMAKE_MAKE_PROGRAM: C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin\mingw64-make.exe
+      MINGW_PATH: C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin
+      PATH:  %PATH%;%MINGW_PATH%
 
     - TOOLCHAIN: "msys-cxx14"
       EXAMPLE: 01-executable
       CONFIG: Release
       CMAKE_MAKE_PROGRAM: C:\msys64\mingw64\bin\mingw32-make
+      MSYS_PATH: C:\msys64\mingw64\bin
+      PATH:  %PATH%;%MSYS_PATH%
 
     - TOOLCHAIN: "msys-cxx17"
       EXAMPLE: 01-executable
       CONFIG: Release
       CMAKE_MAKE_PROGRAM: C:\msys64\mingw64\bin\mingw32-make
+      MSYS_PATH: C:\msys64\mingw64\bin
+      PATH:  %PATH%;%MSYS_PATH%
 
     #- TOOLCHAIN: "vs-14-2015"
     #  EXAMPLE: 02-library
