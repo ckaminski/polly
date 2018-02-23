@@ -153,8 +153,10 @@ if os.name == 'nt':
       Toolchain('mingw', 'MinGW Makefiles'),
       Toolchain('mingw-c11', 'MinGW Makefiles'),
       Toolchain('mingw-cxx14', 'MinGW Makefiles'),
+      Toolchain('mingw-cxx17', 'MinGW Makefiles'),
       Toolchain('msys', 'MSYS Makefiles'),
       Toolchain('msys-cxx14', 'MSYS Makefiles'),
+      Toolchain('msys-cxx17', 'MSYS Makefiles'),
       Toolchain(
           'nmake-vs-12-2013',
           'NMake Makefiles',

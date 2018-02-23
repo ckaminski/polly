@@ -29,7 +29,17 @@ environment:
       CONFIG: Release
 
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+      TOOLCHAIN: "mingw-cxx17"
+      EXAMPLE: 01-executable
+      CONFIG: Release
+
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
       TOOLCHAIN: "msys-cxx14"
+      EXAMPLE: 01-executable
+      CONFIG: Release
+
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+      TOOLCHAIN: "msys-cxx17"
       EXAMPLE: 01-executable
       CONFIG: Release
 
