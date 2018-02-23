@@ -23,26 +23,22 @@ environment:
     #  EXAMPLE: 01-executable
     #  CONFIG: Release
 
-    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-      TOOLCHAIN: "mingw-cxx14"
+    - TOOLCHAIN: "mingw-cxx14"
       EXAMPLE: 01-executable
       CONFIG: Release
       CMAKE_MAKE_PROGRAM: C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin\mingw64-make.exe
 
-    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-      TOOLCHAIN: "mingw-cxx17"
+    - TOOLCHAIN: "mingw-cxx17"
       EXAMPLE: 01-executable
       CONFIG: Release
       CMAKE_MAKE_PROGRAM: C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin\mingw64-make.exe
 
-    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-      TOOLCHAIN: "msys-cxx14"
+    - TOOLCHAIN: "msys-cxx14"
       EXAMPLE: 01-executable
       CONFIG: Release
       CMAKE_MAKE_PROGRAM: C:\msys64\mingw64\bin\mingw32-make
 
-    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-      TOOLCHAIN: "msys-cxx17"
+    - TOOLCHAIN: "msys-cxx17"
       EXAMPLE: 01-executable
       CONFIG: Release
       CMAKE_MAKE_PROGRAM: C:\msys64\mingw64\bin\mingw32-make
