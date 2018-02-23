@@ -83,12 +83,13 @@ install:
   # Use MinGW from Qt tools because version is higher
   # * http://www.appveyor.com/docs/installed-software#qt
   - cmd: set MINGW_PATH=C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin
+  - cmd: dir %MINGW_PATH%
 
   # MSYS2 location
   - cmd: set MSYS_PATH=C:\msys64\mingw64\bin
+  - cmd: dir %MSYS_PATH%
 
   - cmd: echo %PATH%
-  - cmd: where %CMAKE_MAKE_PROGRAM%
 
 build_script:
   - cmd: python %POLLY_SOURCE_DIR%\bin\build.py --home examples/%EXAMPLE% --toolchain %TOOLCHAIN% --config %CONFIG% --verbose --clear --install --test
