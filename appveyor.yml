@@ -87,6 +87,9 @@ install:
   # MSYS2 location
   - cmd: set MSYS_PATH=C:\msys64\mingw64\bin
 
+  - cmd: echo %PATH%
+  - cmd: where %CMAKE_MAKE_PROGRAM%
+
 build_script:
   - cmd: python %POLLY_SOURCE_DIR%\bin\build.py --home examples/%EXAMPLE% --toolchain %TOOLCHAIN% --config %CONFIG% --verbose --clear --install --test
 
