@@ -90,7 +90,7 @@ install:
   - cmd: dir %MSYS_PATH%
 
   - cmd: echo %PATH%
-  - cmd: where sh 
+  - cmd: where sh.exe 
 
 build_script:
   - cmd: python %POLLY_SOURCE_DIR%\bin\build.py --home examples/%EXAMPLE% --toolchain %TOOLCHAIN% --config %CONFIG% --verbose --clear --install --test
