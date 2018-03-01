@@ -94,8 +94,7 @@ install:
   - cmd: set MINGW_PATH=C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin
 
   # MSYS2 location
-  - cmd: set MSYS_PATH=C:\msys64\mingw64\bin
-  - cmd: copy %MSYS_PATH%\mingw32-make.exe %MSYS_PATH%\make.exe
+  - cmd: set MSYS_PATH=C:\msys64\usr\bin
   - cmd: dir %MSYS_PATH% 
 
 build_script:
