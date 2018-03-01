@@ -93,10 +93,10 @@ install:
   # MSYS2 location
   - cmd: set MSYS_PATH=C:\msys64\usr\bin
   - cmd: dir %MSYS_PATH% 
-  - cmd: %MSYS_PATH%\uname -a 
+  - cmd: cmd /c %MSYS_PATH%\uname.exe -a 
 
 build_script:
-  - cmd: python %POLLY_SOURCE_DIR%\bin\build.py --home examples/%EXAMPLE% --toolchain %TOOLCHAIN% --config %CONFIG% --verbose --clear --install --test && type c:\projects\polly\_logs\polly\%TOOLCHAIN%\log.txt 
+  - cmd: python %POLLY_SOURCE_DIR%\bin\build.py --home examples/%EXAMPLE% --toolchain %TOOLCHAIN% --config %CONFIG% --verbose --clear --install --test 
 
 branches:
   except:
