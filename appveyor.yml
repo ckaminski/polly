@@ -95,8 +95,7 @@ install:
   - cmd: dir %MSYS_PATH% 
 
 build_script:
-  - cmd: python %POLLY_SOURCE_DIR%\bin\build.py --home examples/%EXAMPLE% --toolchain %TOOLCHAIN% --config %CONFIG% --verbose --clear --install --test
-  - cmd: type c:\projects\polly\_logs\polly\%TOOLCHAIN%\log.txt 
+  - cmd: python %POLLY_SOURCE_DIR%\bin\build.py --home examples/%EXAMPLE% --toolchain %TOOLCHAIN% --config %CONFIG% --verbose --clear --install --test && type c:\projects\polly\_logs\polly\%TOOLCHAIN%\log.txt 
 
 branches:
   except:
