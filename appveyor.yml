@@ -10,9 +10,9 @@ environment:
     - TOOLCHAIN: "mingw-cxx17"
       EXAMPLE: 01-executable
       CONFIG: Release
-      #CMAKE_MAKE_PROGRAM: mingw32-make.exe
-      #MINGW_PATH: C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin
-      #ADD_TO_PATH: C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin 
+      CMAKE_MAKE_PROGRAM: mingw32-make.exe
+      MINGW_PATH: C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin
+      ADD_TO_PATH: C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\mingw64\bin 
 
 install:
   # Python 3
