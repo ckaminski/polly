@@ -27,7 +27,7 @@ environment:
       EXAMPLE: 01-executable
       CONFIG: Release
 
-    - TOOLCHAIN: "msys"
+    - TOOLCHAIN: "msys-cxx17"
       EXAMPLE: 01-executable
       CONFIG: Release
 
