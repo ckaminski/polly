@@ -7,8 +7,36 @@ environment:
       EXAMPLE: 01-executable
       CONFIG: Release
 
+    - TOOLCHAIN: "ninja-vs-12-2013-win64"
+      EXAMPLE: 01-executable
+      CONFIG: Release
+
+    - TOOLCHAIN: "nmake-vs-12-2013-win64"
+      EXAMPLE: 01-executable
+      CONFIG: Release
+
+    - TOOLCHAIN: "vs-12-2013"
+      EXAMPLE: 01-executable
+      CONFIG: Release
+
+    - TOOLCHAIN: "vs-14-2015"
+      EXAMPLE: 01-executable
+      CONFIG: Release
+
     - TOOLCHAIN: "mingw-cxx17"
       EXAMPLE: 01-executable
+      CONFIG: Release
+
+    - TOOLCHAIN: "msys"
+      EXAMPLE: 01-executable
+      CONFIG: Release
+
+    - TOOLCHAIN: "vs-14-2015"
+      EXAMPLE: 02-library
+      CONFIG: Release
+
+    - TOOLCHAIN: "vs-14-2015"
+      EXAMPLE: 03-shared-link
       CONFIG: Release
 
 install:
