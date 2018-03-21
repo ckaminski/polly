@@ -3,23 +3,12 @@
 environment:
   matrix:
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-      TOOLCHAIN: "vs-15-2017-cxx17"
+      TOOLCHAIN: "vs-15-2017-cxx14"
       EXAMPLE: 01-executable
       CONFIG: Release
 
-    - TOOLCHAIN: "ninja-vs-12-2013-win64"
-      EXAMPLE: 01-executable
-      CONFIG: Release
-
-    - TOOLCHAIN: "nmake-vs-12-2013-win64"
-      EXAMPLE: 01-executable
-      CONFIG: Release
-
-    - TOOLCHAIN: "vs-12-2013"
-      EXAMPLE: 01-executable
-      CONFIG: Release
-
-    - TOOLCHAIN: "vs-14-2015"
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+      TOOLCHAIN: "vs-15-2017-win64-cxx14"
       EXAMPLE: 01-executable
       CONFIG: Release
 
